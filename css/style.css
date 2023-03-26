@@ -1,8 +1,9 @@
 :root {
-  --mian-color: #020102;
-  --second-color:#8956f1;
-  --third-color:#cb80ff;
-  --fourth-color:#241b35;
+  --mian-color: #118499;
+  --second-color:#9c5b46;
+  --third-color:#b4a789;
+  --fourth-color:#4b94a4;
+  --fifeh-color:#156775;
 }
 
 
@@ -27,7 +28,7 @@ header {
   bottom: 0;
   transition: 0.4s;
   z-index: 999;
-  background-color:var(--second-color);
+  background-color:white;
 }
 header .profile {
   text-align: center;
@@ -37,10 +38,10 @@ header .profile img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 8px solid wheat;
+  border: 8px solid var(--fifeh-color);
 }
 header .profile h1 {
-  color: white;
+  color: #000;
   font-weight: 600;
   font-family: "caveat";
 }
@@ -57,7 +58,7 @@ header .profile .social-icons a {
   transition: 0.4s;
 }
 header .profile .social-icons a:hover {
-  background-color: wheat;
+  background-color: var(--second-color);
 }
 
 /**navbar*/
@@ -71,7 +72,7 @@ header nav ul li a {
   display: inline-block;
   padding: 7px 10px;
   margin: 7px 0;
-  color: var(--mian-color);
+  color: var(--third-color);
   font-weight: 600;
   font-size: 15px;
   letter-spacing: 0.6px;
@@ -83,16 +84,16 @@ header nav ul li a i {
   transition: 0.4s;
 }
 header nav ul li a i:hover {
-  color: wheat;
+  color: var(--mian-color);
 }
 header nav ul li .active i {
-  color: wheat;
+  color: var(--mian-color);
 }
 /**footer*/
 header .footer {
   text-align: center;
   width: 300px;
-  background-color: #c2f2fe;
+  background-color: var(--third-color);
   color: #555;
   font-size: 14px;
   letter-spacing: 0.6px;
@@ -104,7 +105,7 @@ header .footer {
 }
 header .footer p a {
   font-family: "caveat";
-  color: var(--second-color);
+  color: #000;
   font-size: 20px;
 }
 
@@ -116,8 +117,8 @@ header .footer p a {
   font-size: 20px;
   width: 40px;
   height: 40px;
-  color: var(--mian-color);
-  background-color: var(--fourth-color);
+  color: #fff;
+  background-color: var(--mian-color);
   text-align: center;
   line-height: 42px;
   border-radius: 50%;
@@ -226,7 +227,7 @@ main {
   width: 80px;
   height: 4px;
   border-radius: 3px;
-  background-color: #007dbb;
+  background-color: var(--third-color);
 }
 #about .divider ~ p {
   color: white;
@@ -234,6 +235,10 @@ main {
   letter-spacing: 0.4px;
   font-weight: 400;
   margin-top: 15px;
+}
+#about p span{
+  font-family: 'caveat';
+  font-size: 28px;
 }
 #about .about-col {
   display: flex;
@@ -338,9 +343,7 @@ main {
 #portofolio {
   padding: 70px 30px;
 }
-#portofolio p{
-  color: white;
-}
+
 #portofolio .port-row {
   margin-top: 50px;
   display: grid;
@@ -350,7 +353,7 @@ main {
 #portofolio .port-row .port-item {
   position: relative;
   border-radius: 10px;
-  overflow: hidden;
+
 }
 #portofolio .port-row .port-item .port-img img {
   width: 100%;
@@ -361,6 +364,7 @@ main {
   top: 0;
   left: 0;
   width: 100%;
+  height: 70%;
   background-color: var(--mian-color);
   padding: 0 15px;
   text-align: center;
@@ -411,6 +415,12 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+  }
+  #portofolio .port-row .port-item .port-info{
+    width: 80%;
+    height: 50%;
+    line-height: 1.6;
+    font-size: 14px;
   }
 }
 @media only screen and (max-width: 350px) {
@@ -504,6 +514,7 @@ textarea {
   outline: none;
   resize: none;
   transition: 0.5s;
+  border-radius: 5px;
 }
 #contact .contact-row .contact-right form input,
 textarea:focus {
